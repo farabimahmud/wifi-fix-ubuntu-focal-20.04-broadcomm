@@ -7,9 +7,9 @@ In this fix I will try to give detailed step by step guide on how to fix the fol
 
 ## Step 1: Check if you have the Ubuntu 20.04 version
 This fix will work for Ubuntu 20.04 LTS version only. For other versions it would not work. 
-1.1 Open Terminal by typing `ctrl + alt + t`
-1.2 Type `lsb_release -a` and hit `enter`
-1.3 If you see something like this then you are fine to proceed to next step
+1. Open Terminal by typing `ctrl + alt + t`
+2. Type `lsb_release -a` and hit `enter`
+3. If you see something like this then you are fine to proceed to next step
 <pre>
 No LSB modules are available.
 Distributor ID:	Ubuntu
@@ -21,9 +21,9 @@ Codename:	focal
 ## Step 2: Check if you have Broadcomm adapters
 This fix will work for some specific models of Broadcomm wifi adapters with BC 43. For other variants of adapters this will not work. 
 To check the version of your wifi adapter - 
-2.1 Open Terminal by typing `ctrl + alt + t`
-2.2 Type `lshw -c network` and hit `enter`
-2.3 If you see something like this then you are fine to proceed to next step
+1. Open Terminal by typing `ctrl + alt + t`
+2. Type `lshw -c network` and hit `enter`
+3. If you see something like this then you are fine to proceed to next step
 
 <pre> *-network
        description: Wireless interface
@@ -57,8 +57,9 @@ You need to collect the following .deb packages via offline (usb drive)
 put all of these files in a separate folder named `driver-broadcomm`
 
 ## Step 4: Installing the driver
-4.1 Now cd to the directory you created in previous step `cd ~/driver-broadcomm`
-4.2 Install the files with the help of dpkg `sudo dpkg -i *.deb`
+In this step we will install using the package manager (dpkg) that is shipped with ubuntu - 
+1. Now cd to the directory you created in previous step `cd ~/driver-broadcomm` 
+2. Install the files with the help of dpkg `sudo dpkg -i *.deb`
 Your wifi adapter should be up and running now like a charm! 
 
 Leave a comment/star if you find this helpful! 
